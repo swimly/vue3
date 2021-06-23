@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import MButton from './src/button.vue'
+
+<Meta
+  title="组件/MButton 按钮"
+/>
+
+## button
+
+<Story name='默认按钮' height='40px'>
+  {{
+    components: { MButton },
+    template: `
+      <div>
+        <m-button>vue按钮</m-button>
+      </div>
+    `,
+  }}
+</Story>

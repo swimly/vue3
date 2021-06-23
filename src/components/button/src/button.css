@@ -1,0 +1,18 @@
+.m-button{
+  display:inline-flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  height: 32px;
+  font-size: 14px;
+  border:1px solid $color-primary;
+  background: $color-primary;
+  color:#fff;
+  padding:0 12px;
+  cursor: pointer;
+  &-label{
+    &:empty{
+      display:none;
+    }
+  }
+}
