@@ -5,7 +5,6 @@ module.exports = {
       files: ['variable.css']
     }),
     require('postcss-import')(),
-    // require('postcss-modules')(),
     require('postcss-nested')(),
     require('postcss-pxtorem')({
       rootValue: 20,
