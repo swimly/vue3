@@ -4,10 +4,12 @@
   "description": "",
   "main": "dist/mui.min.js",
   "scripts": {
-    "dev": "rollup -wc",
-    "storybook": "start-storybook -p 3003",
-    "build-storybook": "build-storybook"
+    "dev": "cross-env ENV=development rollup -wc",
+    "build": "cross-env ENV=producrion rollup -c rollup.config.prod.js",
+    "doc": "start-storybook -p 3003",
+    "build:doc": "build-storybook"
   },
+  "theme": "default",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,7 +22,9 @@
     "@storybook/vue3": "^6.2.9",
     "@vue/compiler-sfc": "^3.1.2",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
+    "cssnano": "^5.0.6",
     "postcss": "^8.1.9",
     "postcss-functions": "^3.0.0",
     "postcss-import": "^12.0.1",
