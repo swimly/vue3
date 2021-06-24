@@ -7,7 +7,13 @@
     "dev": "cross-env ENV=development rollup -wc",
     "build": "cross-env ENV=producrion rollup -c rollup.config.prod.js",
     "doc": "start-storybook -p 3003",
-    "build:doc": "build-storybook"
+    "build:doc": "build-storybook",
+    "push:gitee": "git push gitee master",
+    "push:github": "git push github master",
+    "pull:gitee": "git pull gitee master",
+    "pull:github": "git pull github master",
+    "push": "concurrently \"yarn push:github\" \"yarn push:gitee\"",
+    "pull": "concurrently \"yarn pull:github\" \"yarn pull:gitee\""
   },
   "theme": "default",
   "keywords": [],
@@ -22,6 +28,7 @@
     "@storybook/vue3": "^6.2.9",
     "@vue/compiler-sfc": "^3.1.2",
     "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
     "cssnano": "^5.0.6",
